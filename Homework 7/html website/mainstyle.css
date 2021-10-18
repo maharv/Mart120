@@ -1,0 +1,32 @@
+span.largeTitle{
+    color:rgb(255, 255, 255);
+    background-color:rgb(81, 72, 204);
+    font-size: 36px;
+}
+
+span.subTitle{
+    color:rgb(0, 0, 0);
+    background-color:rgb(139, 255, 236);
+    font-size: 24px;
+}
+
+#titleColor{
+    color:rgb(117, 239, 255);
+    background-color:rgb(241, 114, 28);
+}
+
+#subTitleColor{
+    color:coral;
+    background-color:cyan;
+}
+body {
+    background-image: url("background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#textColor{
+    color: white
+}
