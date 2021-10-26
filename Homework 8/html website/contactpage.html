@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap-5.1.3/css/bootstrap.min.css">
+    <script src="./bootstrap-5.1.3/js/jquery-3.6.0.min"></script>
+    <script src="./bootstrap-5.1.3-dist//js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+</head>
+<body>
+<h1><span class="largeTitle">Contact Page</span></h1>
+<form action="contactpage.html" type="Post">
+First Name: <input type="text" id="fName"><br>
+Last Name: <input type="text" id="lName"><br>
+Email Address: <input type="text" id="email"><br>
+<h3><span class="subTitle">Do you accept terms of agreement?</span></h3>
+<select id="terms">
+<option value="no">No</option>
+<option value="yes">Yes</option>
+</select>
+<br />
+<br />
+<button value="Submit" onclick='checkboxes();' type="button" class="btn btn-success">Submit</button>
+<button type="button" class="btn btn-link">Link</button>
+</form>
+<script type="text/javascript">
+    function checkboxes(){
+
+       // var firstName = ((document.getElementById("fName")||{}).value)||"";
+       var firstName = document.getElementById("fName").value;
+
+        if(firstName == "")
+        {
+            window.alert("Please fill in your first name.");
+            document.getElementById("fName").style.backgroundColor = "red";
+            document.getElementById("fName").focus();
+            
+        }
+       // var lastName = ((document.getElementById("lName")||{}).value)||"";
+       var lastName = document.getElementById("lName").value;
+        if(lastName == "")
+        {
+            window.alert("Please fill in your last name.");
+            document.getElementById("lName").style.backgroundColor = "red";
+            document.getElementById("lName").focus();
+        }
+        //var emailAddress = ((document.getElementById("email")||{}).value)||"";
+        var emailAddress = document.getElementById("email").value;
+        if(emailAddress == "")
+        {
+            window.alert("Please fill in your email address name.");
+            document.getElementById("email").style.backgroundColor = "red";
+            document.getElementById("email").focus();
+        }
+        var select = document.getElementById('terms');
+        var value = select.options[select.selectedIndex].text;
+        if(value = "no")
+        {
+            window.alert("Please accept the terms");
+        }
+    }
+
+    </script>
+</body>
+</html>
